@@ -1,0 +1,25 @@
+{
+  "name": "rightmovewebscraper",
+  "version": "1.0.0",
+  "description": "A web scraper for RightMove",
+  "main": "index.js",
+  "scripts": {
+    "start": "node test/controlCenter.js",
+    "stageone": "node functions/StageOne/getAllResults.js",
+    "stagetwo": "node functions/StageTwo/inspectIndividualProperty.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.10",
+    "child_process": "^1.0.2",
+    "fs": "^0.0.1-security",
+    "puppeteer-extra": "^3.1.18",
+    "puppeteer-extra-plugin-stealth": "^2.7.11"
+  },
+  "directories": {
+    "test": "test"
+  }
+}
