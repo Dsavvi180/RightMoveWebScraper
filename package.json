@@ -4,6 +4,7 @@
   "description": "A web scraper for RightMove",
   "main": "index.js",
   "scripts": {
+    "build": "export NVM_DIR=\"$HOME/.nvm\" && [ -s \"$NVM_DIR/nvm.sh\" ] && \\. \"$NVM_DIR/nvm.sh\" && nvm use 21",
     "start": "node test/controlCenter.js",
     "stageone": "node functions/StageOne/getAllResults.js",
     "stagetwo": "node functions/StageTwo/inspectIndividualProperty.js",
@@ -16,6 +17,9 @@
     "cheerio": "^1.0.0-rc.10",
     "child_process": "^1.0.2",
     "fs": "^0.0.1-security",
+    "package.json": "^2.0.1",
+    "puppeteer": "^22.13.1",
+    "puppeteer-core": "^22.13.1",
     "puppeteer-extra": "^3.1.18",
     "puppeteer-extra-plugin-stealth": "^2.7.11"
   },

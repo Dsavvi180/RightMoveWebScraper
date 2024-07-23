@@ -6,6 +6,7 @@ const getAllResults = require("./functions/StageOne/getAllResults");
 puppeteer.use(StealthPlugin());
 const FileSystem = require("fs").promises;
 const execPython = require("./executePythonInJS");
+const { executablePath } = require("puppeteer");
 
 //The following URL is acquired from applying appropriate filters on RightMove if necessary then using the link after the results have loaded
 const NAVIGATION_URL =
@@ -14,7 +15,11 @@ const NAVIGATION_URL =
 ////////////// START OF CRAWLER ///////////
 //////////////////////////////////////////
 (async function () {
-  browser = await puppeteer.launch({ headless: true });
+  browser = await puppeteer.launch({
+    executablePath: "/snap/bin/chromium",
+    headless: true,
+    args: ["--no-sandbox", "--disable-setuid-sandbox", "--display=:99"],
+  });
   console.log("Starting Crawler.");
   page = await browser.newPage();
   try {
