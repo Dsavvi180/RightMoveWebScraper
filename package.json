@@ -4,7 +4,8 @@
   "description": "A web scraper for RightMove",
   "main": "index.js",
   "scripts": {
-    "build": "export NVM_DIR=\"$HOME/.nvm\" && [ -s \"$NVM_DIR/nvm.sh\" ] && \\. \"$NVM_DIR/nvm.sh\" && nvm use 21",
+    "nvm": "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash",
+    "build": "export NVM_DIR=\"$HOME/.nvm\" && [ -s \"$NVM_DIR/nvm.sh\" ] && . \"$NVM_DIR/nvm.sh\" && [ -s \"$NVM_DIR/bash_completion\" ] && . \"$NVM_DIR/bash_completion\" && nvm use 21",
     "start": "node test/controlCenter.js",
     "stageone": "node functions/StageOne/getAllResults.js",
     "stagetwo": "node functions/StageTwo/inspectIndividualProperty.js",
@@ -27,3 +28,4 @@
     "test": "test"
   }
 }
+

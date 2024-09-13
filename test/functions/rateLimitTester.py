@@ -8,7 +8,7 @@ from time import time
 from concurrent.futures import ThreadPoolExecutor
 
 # URL of the website you want to send the request to
-url = 'https://www.rightmove.co.uk/'
+url = 'https://lamp.neb.com/#!/'
 
 # Function to make the GET request
 def make_request(url):

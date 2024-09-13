@@ -1,4 +1,3 @@
-
 const nearbySales = require("./nearbySales.js");
 const delay = require("../delay.js");
 const nearbySalesAvailable = require("./nearbySalesAvailable.js");
@@ -13,9 +12,9 @@ const addObjectToJSONArray = require("../addObjectToJsonArray.js");
 async function inspectIndividualProperty(propertyURL) {
   //include page as parameter after testing
   const browser = await puppeteer.launch({
-    executablePath: "$HOME/.cache/puppeteer/chrome",
+    // executablePath: "$HOME/.cache/puppeteer/chrome",
     headless: false,
-    args: ["--no-sandbox", "--disable-setuid-sandbox",'--display=:99'],
+    // args: ["--no-sandbox", "--disable-setuid-sandbox",'--display=:99'],
   });
   try {
     const page = await browser.newPage();
@@ -221,4 +220,3 @@ async function inspectIndividualProperty(propertyURL) {
   addObjectToJSONArray("individual_property_data.json", data);
 })();
 module.exports = inspectIndividualProperty;
-

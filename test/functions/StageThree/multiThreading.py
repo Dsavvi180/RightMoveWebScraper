@@ -47,4 +47,4 @@ def concurrentExecution(ArrayOfHrefs,max_threads):
         elapsedTime = end-start
         print(f"Web Scraping Complete. Elapsed time: {elapsedTime}")
     
-concurrentExecution(ArrayOfPropertyHrefs, 1)
+concurrentExecution(ArrayOfPropertyHrefs, 7)

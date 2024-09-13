@@ -16,9 +16,9 @@ const NAVIGATION_URL =
 //////////////////////////////////////////
 (async function () {
   browser = await puppeteer.launch({
-    executablePath: "/snap/bin/chromium",
-    headless: true,
-    args: ["--no-sandbox", "--disable-setuid-sandbox", "--display=:99"],
+    // executablePath: "/snap/bin/chromium",
+    headless: false,
+    // args: ["--no-sandbox", "--disable-setuid-sandbox", "--display=:99"],
   });
   console.log("Starting Crawler.");
   page = await browser.newPage();
